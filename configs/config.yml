@@ -1,0 +1,58 @@
+Silence: false # 静默模式，不在控制台打印内容
+
+DisplayCode: # 返回匹配的http状态码
+  - 200
+  - 301
+  - 302
+
+UpperRatioBound: 0.98 # 网页相似度比较的参数
+
+WafTop: 0 # 只扫描前n条地址
+
+TimeoutCount: 500 # 超过500次无连接则自动结束任务
+
+BaitFile: # 投给WAF的饵食，待定功能
+  - "www.zip"
+  - "www.rar"
+
+SuffixConnector: # 后缀连接符, 比如: index.php.txt, index.php_txt
+  - "."
+  - "_"
+
+DirectorySuffix: # 文件夹类的后缀, 比如: /admin-> /admin.zip; /admin.rar; /admin.tar; /admin.tar.gz
+  - "zip"
+  - "rar"
+  - "tar"
+  - "tar.gz"
+
+DynamicSuffix: # asp, aspx, php, jsp的后缀, 比如: index.php -> index.php.txt, index.php.swp, index.php.bak
+  - "txt"
+  - "swp"
+  - "bak"
+  - "~"
+
+## http请求参数配置 ##
+
+TimeOut: 3 #http连接超时时间
+
+# 支持http/https/socks5协议, example: http://127.0.0.1:8080
+Proxy: # "http://127.0.0.1:8080"
+
+
+# 自定义文件请求头
+Headers:
+  "Connection": "Close"
+  "Accept": "*/*"
+  "Accept-Language": "en,zh"
+
+# cookie和ua比较特殊，单独从请求头中拿出来了
+UserAgent: # 程序会随机选择一个ua，如果想指定ua，则只写那个ua就行
+  - "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; https://zhanzhang.toutiao.com/)"
+  - "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e YisouSpider/5.0 Safari/602.1"
+  - "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+  - "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+  - "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+
+# 设置cookie, example: username=admin; userid=1; PHPSESSID=9d1q9o4927a42p2thki1ql82p7
+Cookie: # username=admin
+

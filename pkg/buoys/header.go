@@ -1,0 +1,37 @@
+package buoys
+
+// http头文件内容，来自于sqlmap
+const (
+	ACCEPT             = "Accept"
+	AcceptCharset      = "Accept-Charset"
+	AcceptEncoding     = "Accept-Encoding"
+	AcceptLanguage     = "Accept-Language"
+	AUTHORIZATION      = "Authorization"
+	CacheControl       = "Cache-Control"
+	CONNECTION         = "Connection"
+	ContentEncoding    = "Content-Encoding"
+	ContentLength      = "Content-Length"
+	ContentRange       = "Content-Range"
+	ContentType        = "Content-Type"
+	COOKIE             = "Cookie"
+	EXPIRES            = "Expires"
+	HOST               = "Host"
+	IfModifiedSince    = "If-Modified-Since"
+	IfNoneMatch        = "If-None-Match"
+	LastModified       = "Last-Modified"
+	LOCATION           = "Location"
+	PRAGMA             = "Pragma"
+	ProxyAuthorization = "Proxy-Authorization"
+	ProxyConnection    = "Proxy-Connection"
+	RANGE              = "Range"
+	REFERER            = "Referer"
+	REFRESH            = "Refresh" // Reference: http://stackoverflow.com/a/283794
+	SERVER             = "Server"
+	SetCookie          = "Set-Cookie"
+	TransferEncoding   = "Transfer-Encoding"
+	URI                = "URI"
+	UserAgent          = "User-Agent"
+	VIA                = "Via"
+	XPoweredBy         = "X-Powered-By"
+	XDataOrigin        = "X-Data-Origin"
+)
